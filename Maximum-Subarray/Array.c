@@ -27,6 +27,21 @@ getRandomArray(int lower_bound,
     return A;
 }
 
+Array *initArrayWithList(int *list, int length)
+{
+    Array *A = (Array*)malloc(sizeof(Array));
+    int *array = (int*)malloc(length * sizeof(int));
+    for (int i = 0; i < length; i++)
+    {
+        array[i] = list[i];
+    }
+
+    A->array = array;
+    A->length = length;
+    
+    return A;
+}
+
 int
 growArrayWithRandomBoundValue(Array *A, int lower_bound, int upper_bound)
 {
@@ -62,10 +77,11 @@ displayArray(Array *A)
     {
         printf(" %d", A->array[i]);
     }
-    printf(" ]\n");
+    printf(" ]");
     return SUCCESS;
 }
 
+/*
 int main()
 {
     int lower_bound = -10;
@@ -84,3 +100,4 @@ int main()
     displayArray(A);
 
 }
+*/
