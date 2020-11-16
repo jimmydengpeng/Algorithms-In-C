@@ -26,7 +26,6 @@ void print_arr(int *arr, int length)
         }
     }
     printf("\n");
-   
 }
 
 int main()
